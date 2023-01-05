@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import Head from "next/head";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
@@ -36,7 +37,7 @@ export default function Home() {
                 <a
                   className="select-none bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 ml-8 rounded-md"
                   href="//cv.aksel.co.id/r/i5y468"
-                  target={"_blank"}
+                  target={"_blank"} rel="noreferrer"
                 >
                   Resume
                 </a>
@@ -69,7 +70,7 @@ export default function Home() {
             </a>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            <Image src={myphoto} className="w-80 md:w-96" />
+            <Image src={myphoto} alt="myphoto" className="w-80 md:w-96" />
           </div>
         </section>
         <section className="py-10">
@@ -84,6 +85,7 @@ export default function Home() {
                   width={"100%"}
                   height={"100%"}
                   src={iris}
+                  alt="iris"
                 />
               </a>
               <a href="//m3119063.mhs.d3tiuns.com/">
@@ -104,6 +106,7 @@ export default function Home() {
                   width={"100%"}
                   height={"100%"}
                   src={dapoint}
+                  alt="iris"
                 />
               </a>
               <p className="text-md dark:text-white mt-3 py-1 md:text-xl">Dapoint</p>
