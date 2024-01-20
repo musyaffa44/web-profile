@@ -1,16 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import Head from "next/head";
-import {
-  BsFillMoonStarsFill,
-  BsFillSunFill,
-  BsGithub,
-} from "react-icons/bs";
-import {
-  AiFillLinkedin,
-  AiFillInstagram,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { BsFillMoonStarsFill, BsFillSunFill, BsGithub } from "react-icons/bs";
+import { AiFillLinkedin, AiFillInstagram, AiOutlineMail } from "react-icons/ai";
 import Image from "next/image";
 import myphoto from "../public/myphoto.png";
 import { FaFileDownload } from "react-icons/fa";
@@ -36,6 +28,7 @@ export default function Home() {
                 className="select-none bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 ml-8 rounded-md  flex items-center gap-x-2"
                 href="https://drive.google.com/file/d/1Mq-1VlhZ7XQCZqxFuAR_PRQxHkCHJ3Lj/view?usp=sharing"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FaFileDownload /> <span>Download My CV</span>
               </a>
@@ -60,9 +53,9 @@ export default function Home() {
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               Code Enthusiast who loves on front - end developing using React
-              JS, and Vue JS. But i also have back - end skills to
-              creating aplication using Laravel. Contact me down below and let's
-              get cracking!
+              JS, and Vue JS. But i also have back - end skills to creating
+              aplication using Laravel. Contact me down below and let's get
+              cracking!
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
@@ -88,7 +81,7 @@ export default function Home() {
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            {PORTO_DATA.map((item) => (
+            {PORTO_DATA.map((item, index) => (
               <PortoItem
                 title={item.title}
                 imageSrc={item.image}
@@ -96,6 +89,7 @@ export default function Home() {
                 techStack={item.techStack}
                 footNote={item.footNote}
                 url={item.url}
+                key={index}
               />
             ))}
           </div>
@@ -106,9 +100,9 @@ export default function Home() {
 }
 
 const PortoItem = (props) => {
-  const { title, url, imageSrc, description, techStack, footNote } = props;
+  const { title, url, imageSrc, description, techStack, footNote, key } = props;
   return (
-    <div className="basis-1/3 flex-1">
+    <div className="basis-1/3 flex-1" key={key}>
       <a href={url}>
         <img
           className="rounded-lg object-cover"
