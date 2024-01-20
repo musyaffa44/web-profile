@@ -153,7 +153,7 @@ const PORTO_DATA = [
     description:
       "Applications for stores provide gifts to their customers in the form of vouchers that are easily accessible and easy to reedem. Aims to increase customer loyalty to related stores",
     techStack: "Created using : Vue JS, Vuetify, Vuex and Javascript Language",
-    footNote: "",
+    footNote: "Developed when i was work for YLabs Indonesia",
   },
   {
     title: "IRIS",
