@@ -49,12 +49,13 @@ export default function Home() {
               Musyaffa Choirun Man
             </h2>
             <h3 className="text-2xl dark:text-white py-2 md:text-3xl">
-              Front End Developer
+              Software Engineer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Code Enthusiast who loves on front - end developing using React
-              JS, and Vue JS. But i also have back - end skills to creating
-              aplication using Laravel. Contact me down below and let's get
+              I am a dedicated software engineer with 2 years of experience. I
+              enjoy creating user-friendly interfaces using React JS and Vue JS
+              on the frontend, and I am proficient in Laravel and Lumen for
+              robust backend development. Contact me down below and let's get
               cracking!
             </p>
           </div>
